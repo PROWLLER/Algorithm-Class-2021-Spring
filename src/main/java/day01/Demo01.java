@@ -5,13 +5,11 @@ import tools.AlgorithmTools;
 public class Demo01 {
 
     public static void main(String[] args) {
-        Integer[] arr = {1, 2, 3, 6, 9, 10, 0, -3, 2, 3, 9, 1};
 
-        System.out.println(QuickSort.quickSort(arr));
-
-        for(int i : arr){
-            System.out.print(" " + i);
-        }
+        Integer[] a = {1, 2, 3, 4, 6, 7};
+        Integer[] b = {5, 9, 10};
+        for(int i=0;i<9;i++)
+        System.out.println(FindKthLargestNumber.getKthLargestNumber(a, b, i + 1));
 
 
 
