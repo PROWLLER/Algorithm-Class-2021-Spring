@@ -1,9 +1,20 @@
 package day01;
 
 import tools.AlgorithmTools;
-
+/**
+ * To find the Kth min number
+ *
+ *
+ * @author PROWLLER
+ *
+ * */
 public class FindKthLargestNumber {
-
+    /**
+     * @param arr1 must be from low to high
+     * @param arr2 must be from low to high
+     * @param k the Kth min number, k start from 0
+     *
+     * */
     public static Comparable getKthLargestNumber(Comparable[] arr1, Comparable[] arr2, int k){
         return getKthLargestNumber(arr1, 0, arr2, 0, k);
     }

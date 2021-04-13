@@ -12,10 +12,31 @@ import tools.AlgorithmTools;
 public class QuickSort {
 
     public static int quickSort(Comparable[] arr){
-        return quickSort(arr, 0, arr.length - 1);
+        return quickSort(arr, true);
     }
     /**
-     * recursive call of quickSort.it sort the array from low to high
+     * @param low2high if set true, the result will be from low to high
+     *
+     *
+     * */
+    public static int quickSort(Comparable[] arr, boolean low2high) {
+
+
+        int result = quickSort(arr, 0, arr.length - 1);
+        Comparable[] arr2 = new Comparable[arr.length];
+        if(low2high){
+            for (int i = 0; i < arr.length; i++) {
+                arr2[i] = arr[i];
+            }
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = arr2[arr.length - i - 1];
+            }
+        }
+        return result;
+
+    }
+    /**
+     * recursive call of quickSort.it sort the array from high to low
      * @param low the low pointer that the part to be sorted.
      * @param high the high pointer that the part to be sorted.
      * @param arr the main array
@@ -44,7 +65,7 @@ public class QuickSort {
 
         low = low + 1;
         while(low < high){
-            if(AlgorithmTools.less(arr[low], arr[middle])){
+            if((AlgorithmTools.less(arr[low], arr[middle]))){
                 AlgorithmTools.exchange(arr, low, high);
                 high --;
             }else{
