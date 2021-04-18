@@ -4,7 +4,7 @@ import java.util.*;
 import tools.AlgorithmTools.Pair;
 /**
  * To solve the matrixMinCalTimes
- * @author PROWLLER
+ * @author PROWLLER·
  * */
 public class MatrixChainProduct {
     public static Integer calMatrixChain(int[] chain){

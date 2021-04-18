@@ -3,13 +3,17 @@ package day02;
 import tools.AlgorithmTools;
 import day02.Graph.*;
 
+import java.util.HashSet;
+import java.util.*;
+
 public class Demo02 {
     public static void main(String[] args) {
-        MatrixChainDemo();
-        LCSubsequenceDemo();
-        LCSubstringDemo();
-        MaxSumDemo();
-        GraphDemo();
+
+        //MatrixChainDemo();
+        //LCSubsequenceDemo();
+        //LCSubstringDemo();
+        //MaxSumDemo();
+        //GraphDemo();
     }
 
     public static void MatrixChainDemo(){

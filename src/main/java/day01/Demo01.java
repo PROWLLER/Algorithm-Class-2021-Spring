@@ -5,6 +5,8 @@ import tools.AlgorithmTools;
 public class Demo01 {
 
     public static void main(String[] args) {
+        FindSumOf2ElementEqualToXDemo();
+        PriorityQueueDemo();
         QuickSortDemo();
         FindKthLargestNumberDemo();
     }

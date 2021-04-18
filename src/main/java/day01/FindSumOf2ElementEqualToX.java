@@ -3,7 +3,7 @@ package day01;
 public class FindSumOf2ElementEqualToX {
 
     public static boolean find(Integer[] arr, Integer target){
-        QuickSort.quickSort(arr);
+        QuickSort.quickSort(arr, false);
 
         int low = 0;
         int high = arr.length - 1;
