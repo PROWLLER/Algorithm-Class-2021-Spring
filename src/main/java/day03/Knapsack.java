@@ -103,7 +103,7 @@ public class Knapsack {
 
     }
 
-    private static class Item implements Comparable{
+    public static class Item implements Comparable{
         private Integer value;
         private Integer weight;
         private Double valuePerWeight;
@@ -139,6 +139,26 @@ public class Knapsack {
             if(result == 0)return 0;
             else if(result > 0)return 1;
             else return -1;
+        }
+
+        @Override
+        public int hashCode() {
+            return value << 20 + weight*3 << 6 + id;
+
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(!(obj instanceof Item)){
+                return false;
+            }
+
+            Item item = (Item)obj;
+            if(this.id == item.getId()
+            && this.weight == item.getWeight()
+            && this.value == item.getValue())return true;
+
+            return false;
         }
     }
 }

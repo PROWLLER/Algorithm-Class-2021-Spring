@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Predicate;
 
-public class EightQueen {
+public class EightQueens {
 
     public static Set<Set<Pair<Integer, Integer>>> solve(Integer dimension, Integer Queens){
         Set<Pair<Integer, Integer>> available = new HashSet<>();
@@ -43,7 +43,8 @@ public class EightQueen {
 
                     return pair.i == index.i ||
                             pair.j == index.j ||
-                            (pair.i - index.i) == (pair.j - index.j);
+                            (pair.i - index.i) == (pair.j - index.j) ||
+                            (pair.i - index.i) == (index.j - pair.j);
                 }
             });
 

@@ -1,8 +1,14 @@
 package day02;
 
+import tools.AlgorithmTools;
+import tools.AlgorithmTools.*;
+
+
+import java.util.Map;
+
 public class Graph {
 
-    public class Edge{
+    public static class Edge{
         private Node source;
         private Node target;
         private Integer len;
@@ -23,9 +29,14 @@ public class Graph {
             this.source = source;
             this.target = target;
         }
+
+        @Override
+        public String toString() {
+            return "Edge{" + source.toString() + "->" + target.toString() + ", len:" + len + "}";
+        }
     }
 
-    public class Node{
+    public static class Node{
         private String name;
 
         public String getName() {
@@ -51,6 +62,11 @@ public class Graph {
         public int hashCode() {
             return name.hashCode();
         }
+
+        @Override
+        public String toString() {
+            return "Node(" + name + ")";
+        }
     }
 
 
@@ -61,6 +77,8 @@ public class Graph {
         this.nodes = nodes;
         this.edges = edges;
     }
+
+
 
     public Graph(){
         getDefaultGraph();
