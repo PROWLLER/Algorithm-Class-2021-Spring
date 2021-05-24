@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LongestCommonSubsequence {
-    public static String findLCS(String a, String b){
+    public static String solve(String a, String b){
         Map<Pair<Integer, Integer>, String> memory = new HashMap<Pair<Integer, Integer>, String>();
         return findLCS(a, 0, b, 0, memory);
     }

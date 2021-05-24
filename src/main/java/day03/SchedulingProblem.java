@@ -5,7 +5,7 @@ import tools.AlgorithmTools.Pair;
 
 public class SchedulingProblem {
     public static Integer[] solve(Integer[] times){
-         Job[] jobs = new Job[times.length];
+        Job[] jobs = new Job[times.length];
         for (int i = 0; i < times.length; i++) {
             jobs[i] = new Job(i, times[i]);
         }

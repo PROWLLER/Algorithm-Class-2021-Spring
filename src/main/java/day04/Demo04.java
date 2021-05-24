@@ -10,7 +10,12 @@ public class Demo04 {
 
     public static void main(String[] args) {
         //BackTrackingKnapsackDemo();
+        long start = System.currentTimeMillis();
+
         EightQueensDemo();
+
+        long end = System.currentTimeMillis();
+        System.out.println("用时:"+(end-start)/1000 + "s");
     }
 
     public static void BackTrackingKnapsackDemo(){

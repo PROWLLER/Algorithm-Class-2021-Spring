@@ -2,8 +2,10 @@ package day04;
 
 import tools.AlgorithmTools.*;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 
 public class EightQueens {
@@ -19,6 +21,7 @@ public class EightQueens {
         Set<Set<Pair<Integer, Integer>>> solved = new HashSet<>();
         backpack(available, new HashSet<>(), Queens, solved);
         return solved;
+        HashMap
     }
 
     private static void backpack(Set<Pair<Integer, Integer>> available,

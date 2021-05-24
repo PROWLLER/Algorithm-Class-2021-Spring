@@ -7,7 +7,7 @@ import tools.AlgorithmTools.Pair;
  * @author PROWLLER·
  * */
 public class MatrixChainProduct {
-    public static Integer calMatrixChain(int[] chain){
+    public static Integer solve(int[] chain){
         Map<IntPair, Integer> memory = new HashMap<IntPair, Integer>();
         return calMatrixChain(chain, 1, chain.length - 1, memory);
     }

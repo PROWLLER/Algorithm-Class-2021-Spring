@@ -19,7 +19,7 @@ public class MaxSum {
      * @return return the maximum
      *
      * */
-    public static Integer findMaxSum(int[] arr, Pair<Integer, Integer> pair){
+    public static Integer solve(int[] arr, Pair<Integer, Integer> pair){
         Map<Pair<Integer, Integer>, Integer> memory = new HashMap<Pair<Integer, Integer>, Integer>();
         Map<Pair<Integer, Integer>, Pair<Integer, Integer>> memory2 =
                 new HashMap<Pair<Integer, Integer>, Pair<Integer, Integer>>();
@@ -30,8 +30,8 @@ public class MaxSum {
         return result.j;
     }
 
-    public static Integer findMaxSum(int[] arr){
-        return findMaxSum(arr, new Pair<>(0,0));
+    public static Integer solve(int[] arr){
+        return solve(arr, new Pair<>(0,0));
     }
 
     private static Pair<Pair<Integer, Integer>, Integer> findMaxSum(int[] arr,

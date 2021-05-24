@@ -2,13 +2,16 @@ package day01;
 
 import tools.AlgorithmTools;
 
+import java.util.Arrays;
+
 public class Demo01 {
 
     public static void main(String[] args) {
+
         FindSumOf2ElementEqualToXDemo();
-        PriorityQueueDemo();
-        QuickSortDemo();
-        FindKthLargestNumberDemo();
+        //PriorityQueueDemo();
+        //QuickSortDemo();
+        //FindKthLargestNumberDemo();
     }
 
     public static void FindSumOf2ElementEqualToXDemo(){

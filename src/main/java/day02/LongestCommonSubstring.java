@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class LongestCommonSubstring {
 
-    public static String findLCS(String a, String b){
+    public static String solve(String a, String b){
         Map<AlgorithmTools.Pair<Integer, Integer>, String> memory1 = new HashMap<AlgorithmTools.Pair<Integer, Integer>, String>();
         Map<AlgorithmTools.Pair<Integer, Integer>, String> memory2 = new HashMap<AlgorithmTools.Pair<Integer, Integer>, String>();
         String r = findLCS(a, 0, b, 0, memory1, memory2);

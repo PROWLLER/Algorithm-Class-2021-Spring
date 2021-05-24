@@ -11,7 +11,7 @@ import java.util.*;
  * */
 public class ShortestPathInGraph {
 
-    public static Node[] findPathInGraph(Graph graph, Node source, Node target){
+    public static Node[] solve(Graph graph, Node source, Node target){
 
         Node[] nodes = graph.getNodes();
         Edge[] edges = graph.getEdges();

@@ -2,6 +2,8 @@ package tools;
 
 import day02.MatrixChainProduct;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class AlgorithmTools {
@@ -28,6 +30,18 @@ public class AlgorithmTools {
         Object temp = arrayList.get(a);
         arrayList.set(a, arrayList.get(b));
         arrayList.set(b, temp);
+    }
+
+    public static Pair<Long, Object> timeLoggerProxy(Class clazz, String methodName, Object[] parameters, Class[] paraClazz)
+            throws
+            NoSuchMethodException,
+            IllegalAccessException,
+            InvocationTargetException {
+        Method method = clazz.getMethod(methodName, paraClazz);
+        long startTime = System.currentTimeMillis();
+        Object result = method.invoke(parameters);
+        long endTime = System.currentTimeMillis();
+        return new Pair<>(startTime-endTime, result);
     }
 
     public static class Pair<K1, K2>{

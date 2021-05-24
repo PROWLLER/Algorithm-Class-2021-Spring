@@ -10,10 +10,10 @@ import java.util.Set;
 public class Demo03 {
 
     public static void main(String[] args) {
-        //KnapsackDemo();
-        //SchedulingDemo();
+        KnapsackDemo();
+        SchedulingDemo();
         SingleSourceShortestPathDemo();
-        //AllPairsShortestPathDemo();
+        AllPairsShortestPathDemo();
     }
 
     public static void KnapsackDemo(){
